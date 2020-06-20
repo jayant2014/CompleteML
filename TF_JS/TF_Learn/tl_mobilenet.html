@@ -4,22 +4,21 @@
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script> 
 </head>
 <body>
-    <img id="img" src="goldfish.jpg"></img>
+    <img id="image" src="Espresso_Brewed.jpg"></img>
     <!--
-    <img id="img" src="Espresso_Brewed.jpg"></img>
-    <img id="img" src="cappuccino.jpg"></img>    
-    <img id="img" src="goldfish1.jpg"></img>
+    <img id="image" src="cappuccino.jpg"></img>    
+    <img id="image" src="goldfish1.jpg"></img>
     -->
     <div id="output" style="font-family:courier;font-size:24px;height=200px"></div>
 </body>
 <script>
-    const img = document.getElementById('img');
-    const outp = document.getElementById('output');
+    const imgage = document.getElementById('image');
+    const output = document.getElementById('output');
     mobilenet.load().then(model => {
-        model.classify(img).then(predictions => {
+        model.classify(image).then(predictions => {
             console.log(predictions);
             for(var i = 0; i<predictions.length; i++){
-                outp.innerHTML += "<br/>" + predictions[i].className + " : " + predictions[i].probability;
+                output.innerHTML += "<br/>" + predictions[i].className + " : " + predictions[i].probability;
             }
         });
     });

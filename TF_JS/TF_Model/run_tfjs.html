@@ -24,7 +24,7 @@
         const xs = tf.tensor2d([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0], [6, 1]);
         const ys = tf.tensor2d([-4.0, -2.0, 0.0, 2.0, 4.0, 6.0], [6, 1]);
         doTraining(model).then(() => {
-            alert(model.predict(tf.tensor2d([10], [1,1])));
+            alert(model.predict(tf.tensor2d([20], [1,1])));
         });
     </script>
 <body>

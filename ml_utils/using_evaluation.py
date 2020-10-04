@@ -26,3 +26,8 @@ print("\n=================")
 print("Accuracy using TP, FP, TN, FN")
 accuracy = mlu.accuracy_new(l1, l2)
 print("Accuracy : ", accuracy)
+
+print("\n=================")
+print("Precision Calculation")
+precision = mlu.precision(l1, l2)
+print("Precision : ", precision)

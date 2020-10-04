@@ -76,7 +76,7 @@ def false_negative(y_true, y_pred):
 
 def accuracy_new(y_true, y_pred):
     '''
-    Function to calculate accurayc using tp, tn, fp, fn
+    Function to calculate accuracy using tp, tn, fp, fn
     :param y_true : List of true values
     :param y_pred : List of predicted values
     :return : Accuracy score
@@ -91,3 +91,16 @@ def accuracy_new(y_true, y_pred):
     accuracy = (tp + tn) / total_samples
 
     return accuracy
+
+def precision(y_true, y_pred):
+    '''
+    Function to calculate precision
+    :param y_true : List of true values
+    :param y_pred : List of predicted values
+    :return : Precision score
+    '''
+
+    tp = true_positive(y_true, y_pred)
+    fp = false_positive(y_true, y_pred)
+    precision = tp / (tp + fp)
+    return precision

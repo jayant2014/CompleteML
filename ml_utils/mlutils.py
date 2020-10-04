@@ -69,7 +69,7 @@ def split_data(test_size):
     X_train.shape, X_test.shape, y_train.shape, y_test.shape     
     return X_train, X_test, y_train, y_test
 
-def one_hot_encoder(cat_features)
+def one_hot_encoder(cat_features):
     # Categorical features as list
     # categorical_features = ["Make", "Colour", "Doors"]
     one_hot = OneHotEncoder()
@@ -140,6 +140,7 @@ def evaluate_model(clf, X_train, y_train, X_test, y_test):
     
    
 def save_model():
+    pass
     
 def load_model():
  
